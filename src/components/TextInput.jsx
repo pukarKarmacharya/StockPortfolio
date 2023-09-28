@@ -10,8 +10,8 @@ export const TextInput = ({
             <input
                 type={type}
                 placeholder={placeholder}
-                style={{ ...style.input, inputStyle}}
-                onChange={onTextChange}
+                style={{ ...style.input, ...inputStyle }}
+                onChange={(e) => onTextChange(e.target.value)}
                 value={value}
             />
         </div>
@@ -21,7 +21,9 @@ export const TextInput = ({
 const style ={
     input: {
         borderRadius:'12px',
-        width:'100%'
-
+        width:'100%',
+        //marginBottom: 10,
+        padding: 8,
+        fontSize: 14,
     }
 }
